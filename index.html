@@ -24,7 +24,7 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:var(--bg);
     color:var(--text);
 }
@@ -62,6 +62,7 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
+    transition:.3s;
 }
 
 nav a:hover{
@@ -82,24 +83,28 @@ nav a:hover{
     font-size:5rem;
     color:var(--primary);
     text-shadow:0 0 20px var(--primary);
-    margin-bottom:15px;
 }
 
 .hero p{
+    margin-top:20px;
     max-width:800px;
-    line-height:1.8;
     font-size:1.2rem;
+    line-height:1.8;
 }
 
 .btn{
-    margin-top:30px;
     display:inline-block;
+    margin-top:30px;
+    padding:15px 30px;
     background:var(--primary);
     color:black;
-    text-decoration:none;
-    padding:15px 30px;
     border-radius:10px;
+    text-decoration:none;
     font-weight:bold;
+}
+
+.btn:hover{
+    transform:scale(1.05);
 }
 
 section{
@@ -141,11 +146,19 @@ section{
     margin-bottom:10px;
 }
 
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
 .social{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:15px;
+    margin-top:20px;
 }
 
 .social a{
@@ -154,6 +167,7 @@ section{
     border:1px solid var(--primary);
     padding:10px 18px;
     border-radius:8px;
+    transition:.3s;
 }
 
 .social a:hover{
@@ -161,11 +175,10 @@ section{
     color:black;
 }
 
-.about{
+.contact-card{
+    max-width:600px;
+    margin:30px auto;
     text-align:center;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
 }
 
 footer{
@@ -183,13 +196,13 @@ footer{
 nav ul{
     flex-wrap:wrap;
     justify-content:center;
+    gap:10px;
 }
 
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
@@ -239,31 +252,41 @@ Explorar Produtos
 <div class="card">
 imagens/transformers.jpg
 <h3>Transformers ARDUET</h3>
-<p>Modelos inspirados na robótica, criatividade e tecnologia.</p>
+<p>
+Modelos inspirados em robótica, engenharia e criatividade.
+</p>
 </div>
 
 <div class="card">
 imagens/liquidificador.jpg
 <h3>Liquidificador Portátil</h3>
-<p>Portátil, recarregável e prático para o dia a dia.</p>
+<p>
+Prático, portátil e recarregável para o dia a dia.
+</p>
 </div>
 
 <div class="card">
 imagens/camisetas.jpg
 <h3>Camisetas ARDUET</h3>
-<p>Estilo, conforto e identidade exclusiva.</p>
+<p>
+Estilo, conforto e identidade visual exclusiva.
+</p>
 </div>
 
 <div class="card">
 imagens/chavenas.jpg
 <h3>Chávenas ARDUET</h3>
-<p>Canecas personalizadas para fãs da marca.</p>
+<p>
+Canecas personalizadas para fãs da marca.
+</p>
 </div>
 
 <div class="card">
 imagens/beyblades.jpg
 <h3>Beyblades ARDUET</h3>
-<p>Design exclusivo, desempenho e diversão.</p>
+<p>
+Design exclusivo, desempenho e diversão.
+</p>
 </div>
 
 </div>
@@ -278,32 +301,30 @@ imagens/beyblades.jpg
 
 <div class="card">
 <h3>⚡ Instalações Elétricas</h3>
-<p>Instalações residenciais e comerciais.</p>
+<p>
+Instalações elétricas residenciais e comerciais.
+</p>
 </div>
 
 <div class="card">
 <h3>🔧 Manutenção Elétrica</h3>
-<p>Diagnóstico e reparação de avarias.</p>
+<p>
+Diagnóstico e reparação de avarias elétricas.
+</p>
 </div>
 
 <div class="card">
 <h3>💡 Sistemas de Iluminação</h3>
-<p>Instalação de iluminação LED e decorativa.</p>
+<p>
+Instalação de iluminação LED e decorativa.
+</p>
 </div>
 
 <div class="card">
 <h3>🏠 Ligações Residenciais</h3>
-<p>Execução de ligações elétricas domésticas.</p>
-</div>
-
-<div class="card">
-<h3>⚙️ Montagem de Postes</h3>
-<p>Experiência prática em trabalhos de rede elétrica.</p>
-</div>
-
-<div class="card">
-<h3>🔌 Cabo ABC</h3>
-<p>Instalação e manutenção de cabo ABC.</p>
+<p>
+Ligações elétricas para habitações e pequenos estabelecimentos.
+</p>
 </div>
 
 </div>
@@ -316,12 +337,12 @@ imagens/beyblades.jpg
 
 <div class="about">
 
-A ARDUET é uma marca criativa dedicada à tecnologia,
-eletrónica, robótica, design, inovação e cultura maker.
+A ARDUET é uma marca dedicada à tecnologia, inovação,
+criatividade e cultura maker.
 
-Além dos produtos da marca, também disponibilizamos
-serviços elétricos com foco na qualidade, segurança
-e profissionalismo.
+Desenvolvemos produtos exclusivos e disponibilizamos
+serviços elétricos com foco na qualidade, profissionalismo
+e satisfação dos clientes.
 
 </div>
 
@@ -355,7 +376,7 @@ GitHub
 
 </div>
 
-<div class="card" style="max-width:600px;margin:30px auto;text-align:center;">
+<div class="card contact-card">
 
 <h3>ARDUET</h3>
 
@@ -364,6 +385,8 @@ GitHub
 <p>📺 YouTube: @arduet09</p>
 
 <p>📸 Instagram: @arduetoficial</p>
+
+<p>📘 Facebook: ARDUET Oficial</p>
 
 </div>
 
@@ -383,4 +406,3 @@ GitHub
 
 </body>
     </html>
-    

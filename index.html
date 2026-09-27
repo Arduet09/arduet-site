@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ARDUET | Cria. Evolui. Inspira.</title>
 
 <style>
@@ -23,7 +24,7 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
 }
@@ -86,8 +87,8 @@ nav a:hover{
 
 .hero p{
     max-width:800px;
-    font-size:1.3rem;
     line-height:1.8;
+    font-size:1.2rem;
 }
 
 .btn{
@@ -99,11 +100,6 @@ nav a:hover{
     padding:15px 30px;
     border-radius:10px;
     font-weight:bold;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
 }
 
 section{
@@ -116,25 +112,7 @@ section{
     text-align:center;
     color:var(--primary);
     margin-bottom:40px;
-    font-size:2.4rem;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.stat{
-    background:var(--card);
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.stat h3{
-    color:var(--primary);
-    font-size:2rem;
+    font-size:2.3rem;
 }
 
 .cards{
@@ -150,16 +128,17 @@ section{
     border:1px solid rgba(0,217,255,.2);
 }
 
-.card h3{
-    margin-bottom:10px;
-    color:var(--primary);
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
 }
 
 .social{
@@ -167,7 +146,6 @@ section{
     justify-content:center;
     flex-wrap:wrap;
     gap:15px;
-    margin-top:30px;
 }
 
 .social a{
@@ -176,12 +154,18 @@ section{
     border:1px solid var(--primary);
     padding:10px 18px;
     border-radius:8px;
-    transition:.3s;
 }
 
 .social a:hover{
     background:var(--primary);
     color:black;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
 }
 
 footer{
@@ -196,13 +180,9 @@ footer{
     font-size:3rem;
 }
 
-.hero p{
-    font-size:1rem;
-}
-
 nav ul{
-    gap:10px;
-    font-size:.9rem;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 }
@@ -222,6 +202,7 @@ nav ul{
 <ul>
 <li>#inicioInício</a></li>
 <li>#produtosProdutos</a></li>
+<li>#servicosServiços</a></li>
 <li>#sobreSobre</a></li>
 <li>#contactoContacto</a></li>
 </ul>
@@ -240,37 +221,12 @@ Cria. Evolui. Inspira.
 <br><br>
 Mais que produtos, é criação.
 <br>
-Tecnologia, design, inovação e cultura maker numa única marca.
+Tecnologia, inovação, design e cultura maker numa única marca.
 </p>
 
 #produtos
 Explorar Produtos
 </a>
-
-</section>
-
-<section>
-
-<h2 class="section-title">ARDUET em Números</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h3>5+</h3>
-<p>Linhas de Produtos</p>
-</div>
-
-<div class="stat">
-<h3>DIY</h3>
-<p>Cultura Maker</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>Criatividade</p>
-</div>
-
-</div>
 
 </section>
 
@@ -281,38 +237,73 @@ Explorar Produtos
 <div class="cards">
 
 <div class="card">
-<h3>🤖 Transformers ARDUET</h3>
-<p>
-Modelos articulados inspirados em robótica, tecnologia e criatividade.
-</p>
+imagens/transformers.jpg
+<h3>Transformers ARDUET</h3>
+<p>Modelos inspirados na robótica, criatividade e tecnologia.</p>
 </div>
 
 <div class="card">
-<h3>🥤 Liquidificador Portátil ARDUET</h3>
-<p>
-Portátil, recarregável e ideal para sumos e batidos.
-</p>
+imagens/liquidificador.jpg
+<h3>Liquidificador Portátil</h3>
+<p>Portátil, recarregável e prático para o dia a dia.</p>
 </div>
 
 <div class="card">
-<h3>👕 Camisetas ARDUET</h3>
-<p>
-Conforto e identidade visual exclusiva da marca.
-</p>
+imagens/camisetas.jpg
+<h3>Camisetas ARDUET</h3>
+<p>Estilo, conforto e identidade exclusiva.</p>
 </div>
 
 <div class="card">
-<h3>☕ Chávenas ARDUET</h3>
-<p>
-Canecas personalizadas para o dia a dia.
-</p>
+imagens/chavenas.jpg
+<h3>Chávenas ARDUET</h3>
+<p>Canecas personalizadas para fãs da marca.</p>
 </div>
 
 <div class="card">
-<h3>🔥 Beyblades ARDUET</h3>
-<p>
-Design exclusivo, desempenho e diversão.
-</p>
+imagens/beyblades.jpg
+<h3>Beyblades ARDUET</h3>
+<p>Design exclusivo, desempenho e diversão.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="servicos">
+
+<h2 class="section-title">Serviços Elétricos</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚡ Instalações Elétricas</h3>
+<p>Instalações residenciais e comerciais.</p>
+</div>
+
+<div class="card">
+<h3>🔧 Manutenção Elétrica</h3>
+<p>Diagnóstico e reparação de avarias.</p>
+</div>
+
+<div class="card">
+<h3>💡 Sistemas de Iluminação</h3>
+<p>Instalação de iluminação LED e decorativa.</p>
+</div>
+
+<div class="card">
+<h3>🏠 Ligações Residenciais</h3>
+<p>Execução de ligações elétricas domésticas.</p>
+</div>
+
+<div class="card">
+<h3>⚙️ Montagem de Postes</h3>
+<p>Experiência prática em trabalhos de rede elétrica.</p>
+</div>
+
+<div class="card">
+<h3>🔌 Cabo ABC</h3>
+<p>Instalação e manutenção de cabo ABC.</p>
 </div>
 
 </div>
@@ -325,12 +316,12 @@ Design exclusivo, desempenho e diversão.
 
 <div class="about">
 
-A ARDUET é uma marca criativa focada em tecnologia,
-design, inovação e cultura maker.
+A ARDUET é uma marca criativa dedicada à tecnologia,
+eletrónica, robótica, design, inovação e cultura maker.
 
-Desenvolvemos conceitos, produtos e projectos que unem
-imaginação, engenharia e criatividade para inspirar
-pessoas a criar, evoluir e inovar.
+Além dos produtos da marca, também disponibilizamos
+serviços elétricos com foco na qualidade, segurança
+e profissionalismo.
 
 </div>
 
@@ -338,28 +329,28 @@ pessoas a criar, evoluir e inovar.
 
 <section id="contacto">
 
-<h2 class="section-title">Contactos e Redes Sociais</h2>
+<h2 class="section-title">Contacto</h2>
 
 <div class="social">
 
 <a href="https://youtube.com/@arduet09?si=4L_tiF2lJ_ncvXWu" target="_blank">
-📺 YouTube
+YouTube
 </a>
 
 <a href="https://www.instagram.com/arduetoficial?stkn=aXpkbzlyZTNidjMz" target="_blank">
-📸 Instagram
+Instagram
 </a>
 
 <a href="https://www.facebook.com/profile.php?id=61593821342942" target="_blank">
-📘 Facebook
+Facebook
 </a>
 
-https://wa.me/+258843784290
-💬 WhatsApp
+https://wa.me/258843784290
+WhatsApp
 </a>
 
 https://github.com/arduet09
-💻 GitHub
+GitHub
 </a>
 
 </div>
@@ -368,13 +359,11 @@ https://github.com/arduet09
 
 <h3>ARDUET</h3>
 
-<p><strong>WhatsApp:</strong> +258 843 784 290</p>
+<p>📱 WhatsApp: +258 843 784 290</p>
 
-<p><strong>YouTube:</strong> @arduet09</p>
+<p>📺 YouTube: @arduet09</p>
 
-<p><strong>Instagram:</strong> @arduetoficial</p>
-
-<p><strong>Facebook:</strong> ARDUET Oficial</p>
+<p>📸 Instagram: @arduetoficial</p>
 
 </div>
 

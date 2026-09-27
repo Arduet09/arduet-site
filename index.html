@@ -2,165 +2,351 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARDUET | DIY • Tecnologia • Inovação</title>
 
-    <title>Arduet | DIY • Tecnologia • Inovação</title>
+<style>
+:root{
+--bg:#020814;
+--card:#0a1324;
+--primary:#00d4ff;
+--text:#ffffff;
+--gray:#b0b0b0;
+}
 
-    <link rel="stylesheet" href="style.css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    <style>
-        .intro {
-            text-align: center;
-            padding: 70px 20px;
-        }
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
 
-        .intro h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+header{
+position:sticky;
+top:0;
+background:rgba(2,8,20,.95);
+backdrop-filter:blur(10px);
+z-index:100;
+border-bottom:1px solid rgba(0,212,255,.3);
+}
 
-        .intro p {
-            font-size: 20px;
-        }
+.navbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
 
-        .intro-button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+.logo{
+font-size:2rem;
+font-weight:bold;
+color:var(--primary);
+text-shadow:0 0 15px var(--primary);
+}
 
-        .section {
-            padding: 45px 20px;
-            text-align: center;
-        }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
-        }
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
 
-        .card {
-            width: 250px;
-            padding: 25px;
-            border-radius: 12px;
-        }
+nav a:hover{
+color:var(--primary);
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(2,8,20,.8),rgba(2,8,20,.8));
+}
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-        }
-    </style>
+.hero h1{
+font-size:5rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.4rem;
+max-width:800px;
+line-height:1.6;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:var(--primary);
+color:#000;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px var(--primary);
+}
+
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+color:var(--primary);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.stat{
+background:var(--card);
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat h3{
+font-size:2rem;
+color:var(--primary);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+transition:.3s;
+border:1px solid rgba(0,212,255,.2);
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(0,212,255,.25);
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--primary);
+}
+
+.about{
+text-align:center;
+line-height:1.8;
+font-size:1.1rem;
+max-width:900px;
+margin:auto;
+}
+
+.social{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.social a{
+text-decoration:none;
+padding:10px 18px;
+border:1px solid var(--primary);
+color:var(--primary);
+border-radius:8px;
+transition:.3s;
+}
+
+.social a:hover{
+background:var(--primary);
+color:black;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+nav ul{
+gap:12px;
+font-size:.9rem;
+}
+}
+</style>
 </head>
 
 <body>
 
-    <header class="site-header">
+<header>
+<div class="navbar">
+<div class="logo">ARDUET</div>
 
-        <div class="logo-area">
-            <img src="logo.png" alt="Logo Arduet" class="logo">
-            <span class="brand-name">ARDUET</span>
-        </div>
+<nav>
+<ul>
+<li>#inicioInício</a></li>
+<li>#projetosProjetos</a></li>
+<li>#produtosProdutos</a></li>
+<li>#sobreSobre</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-        <nav class="main-nav">
-            <a href="index.html" class="active">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-        </nav>
+<section class="hero" id="inicio">
+<h1>ARDUET</h1>
 
-    </header>
+<p>
+DIY • Tecnologia • Inovação<br><br>
+Criamos, construímos e transformamos ideias em projetos tecnológicos,
+mecânicos e criativos.
+</p>
 
+#projetos
+Conheça os nossos projetos
+</a>
+</section>
 
-    <main>
+<section>
+<h2 class="section-title">📊 ARDUET em Números</h2>
 
-        <section class="intro">
+<div class="stats">
+<div class="stat">
+<h3>10+</h3>
+<p>Projetos Criados</p>
+</div>
 
-            <h1>ARDUET</h1>
+<div class="stat">
+<h3>100%</h3>
+<p>Criatividade</p>
+</div>
 
-            <p>
-                DIY • Tecnologia • Inovação
-            </p>
+<div class="stat">
+<h3>DIY</h3>
+<p>Aprender Fazendo</p>
+</div>
+</div>
+</section>
 
-            <p>
-                Criamos, construímos e transformamos ideias em projetos.
-            </p>
+<section id="projetos">
+<h2 class="section-title">🚀 Projetos em Destaque</h2>
 
-            <a href="projetos.html" class="intro-button">
-                Conheça os nossos projetos
-            </a>
+<div class="cards">
 
-        </section>
+<div class="card">
+<h3>🤖 Transformer Arduet</h3>
+<p>
+Projeto mecânico inspirado em robôs transformáveis e engenharia criativa.
+</p>
+</div>
 
+<div class="card">
+<h3>⚙️ Projetos Arduino</h3>
+<p>
+Automação, sensores, eletrónica e programação para iniciantes.
+</p>
+</div>
 
-        <section class="section">
+<div class="card">
+<h3>🔧 DIY Maker</h3>
+<p>
+Construções práticas utilizando materiais acessíveis e reutilizados.
+</p>
+</div>
 
-            <h2>🚀 Projetos em Destaque</h2>
+</div>
+</section>
 
-            <div class="cards">
+<section id="produtos">
+<h2 class="section-title">🛒 Produtos</h2>
 
-                <div class="card">
-                    <h3>🤖 Transformer Arduet</h3>
-                    <p>
-                        Um projeto mecânico criado com materiais acessíveis,
-                        motores e muita criatividade.
-                    </p>
-                </div>
+<div class="cards">
 
-                <div class="card">
-                    <h3>🌀 Beyblade DIY</h3>
-                    <p>
-                        Beyblades feitos artesanalmente utilizando materiais
-                        simples e recicláveis.
-                    </p>
-                </div>
+<div class="card">
+<h3>Kit Arduino</h3>
+<p>Conjunto ideal para aprender eletrónica e programação.</p>
+</div>
 
-                <div class="card">
-                    <h3>⚡ Energia</h3>
-                    <p>
-                        Projetos envolvendo eletricidade, motores,
-                        baterias e energia solar.
-                    </p>
-                </div>
+<div class="card">
+<h3>Peças DIY</h3>
+<p>Componentes para os seus projetos criativos.</p>
+</div>
 
-            </div>
+<div class="card">
+<h3>Modelos Arduet</h3>
+<p>Projetos exclusivos desenvolvidos pela comunidade ARDUET.</p>
+</div>
 
-        </section>
+</div>
+</section>
 
+<section id="sobre">
+<h2 class="section-title">ℹ️ Sobre a ARDUET</h2>
 
-        <section class="section">
+<div class="about">
+A ARDUET é um projecto focado em tecnologia, mecânica, robótica,
+electrónica e criatividade. O objetivo é transformar ideias simples
+em construções reais, incentivando a aprendizagem prática através da
+experimentação e inovação.
+</div>
 
-            <h2>🛠️ O que é a Arduet?</h2>
+<div class="social">
+https://youtube.com/@arduet09YouTube</a>
+https://github.com/arduet09GitHub</a>
+#Facebook</a>
+#WhatsApp</a>
+</div>
 
-            <p>
-                A Arduet é um projeto focado em tecnologia,
-                eletrônica, criatividade e construção DIY.
-            </p>
+</section>
 
-            <p>
-                A nossa missão é transformar ideias em coisas reais.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <p>© 2026 Arduet — DIY • Tecnologia • Inovação</p>
-
-    </footer>
-
+<footer>
+<p>© 2026 ARDUET • DIY • Tecnologia • Inovação</p>
+</footer>
 
 </body>
-                                     </html>
+    </html>
+                                              

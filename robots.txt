@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arduet09.github.io/arduet-site/sitemap.xml

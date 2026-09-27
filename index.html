@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ARDUET | DIY • Tecnologia • Inovação</title>
+<title>ARDUET | Cria. Evolui. Inspira.</title>
 
 <style>
 
@@ -34,16 +33,16 @@ header{
     top:0;
     background:#050b18;
     border-bottom:2px solid var(--primary);
-    z-index:999;
+    z-index:1000;
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:15px 20px;
 }
 
 .logo{
@@ -54,14 +53,14 @@ header{
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:20px;
 }
 
 nav a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
 }
 
 nav a:hover{
@@ -80,29 +79,31 @@ nav a:hover{
 
 .hero h1{
     font-size:5rem;
-    margin-bottom:10px;
+    color:var(--primary);
+    text-shadow:0 0 20px var(--primary);
+    margin-bottom:15px;
 }
 
 .hero p{
-    font-size:1.4rem;
-    max-width:750px;
-    line-height:1.6;
+    max-width:800px;
+    font-size:1.3rem;
+    line-height:1.8;
 }
 
 .btn{
     margin-top:30px;
     display:inline-block;
-    text-decoration:none;
     background:var(--primary);
     color:black;
+    text-decoration:none;
     padding:15px 30px;
     border-radius:10px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
     transform:scale(1.05);
-    box-shadow:0 0 20px var(--primary);
 }
 
 section{
@@ -115,12 +116,12 @@ section{
     text-align:center;
     color:var(--primary);
     margin-bottom:40px;
-    font-size:2.5rem;
+    font-size:2.4rem;
 }
 
 .stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
@@ -146,25 +147,25 @@ section{
     background:var(--card);
     padding:25px;
     border-radius:15px;
-    border:1px solid rgba(0,217,255,.3);
+    border:1px solid rgba(0,217,255,.2);
 }
 
 .card h3{
-    color:var(--primary);
     margin-bottom:10px;
+    color:var(--primary);
 }
 
 .about{
-    text-align:center;
-    max-width:800px;
+    max-width:900px;
     margin:auto;
+    text-align:center;
     line-height:1.8;
 }
 
 .social{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
+    flex-wrap:wrap;
     gap:15px;
     margin-top:30px;
 }
@@ -175,7 +176,7 @@ section{
     border:1px solid var(--primary);
     padding:10px 18px;
     border-radius:8px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .social a:hover{
@@ -184,9 +185,8 @@ section{
 }
 
 footer{
-    margin-top:40px;
-    padding:30px;
     text-align:center;
+    padding:30px;
     border-top:1px solid rgba(255,255,255,.1);
 }
 
@@ -197,7 +197,7 @@ footer{
 }
 
 .hero p{
-    font-size:1.1rem;
+    font-size:1rem;
 }
 
 nav ul{
@@ -221,9 +221,9 @@ nav ul{
 <nav>
 <ul>
 <li>#inicioInício</a></li>
-<li>#projetosProjetos</a></li>
 <li>#produtosProdutos</a></li>
 <li>#sobreSobre</a></li>
+<li>#contactoContacto</a></li>
 </ul>
 </nav>
 
@@ -236,14 +236,15 @@ nav ul{
 <h1>ARDUET</h1>
 
 <p>
-DIY • Tecnologia • Inovação
+Cria. Evolui. Inspira.
 <br><br>
-Criamos, construímos e transformamos ideias em projetos tecnológicos,
-mecânicos e criativos.
+Mais que produtos, é criação.
+<br>
+Tecnologia, design, inovação e cultura maker numa única marca.
 </p>
 
-#projetos
-Conheça os nossos projetos
+#produtos
+Explorar Produtos
 </a>
 
 </section>
@@ -255,49 +256,18 @@ Conheça os nossos projetos
 <div class="stats">
 
 <div class="stat">
-<h3>10+</h3>
-<p>Projetos</p>
+<h3>5+</h3>
+<p>Linhas de Produtos</p>
 </div>
 
 <div class="stat">
 <h3>DIY</h3>
-<p>Criatividade</p>
+<p>Cultura Maker</p>
 </div>
 
 <div class="stat">
 <h3>100%</h3>
-<p>Paixão pela Tecnologia</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="projetos">
-
-<h2 class="section-title">Projetos em Destaque</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Transformer Arduet</h3>
-<p>
-Projeto mecânico inspirado em robôs transformáveis.
-</p>
-</div>
-
-<div class="card">
-<h3>Projetos Arduino</h3>
-<p>
-Automação, sensores, eletrónica e programação.
-</p>
-</div>
-
-<div class="card">
-<h3>DIY Maker</h3>
-<p>
-Projetos criativos utilizando materiais acessíveis.
-</p>
+<p>Criatividade</p>
 </div>
 
 </div>
@@ -306,23 +276,43 @@ Projetos criativos utilizando materiais acessíveis.
 
 <section id="produtos">
 
-<h2 class="section-title">Produtos</h2>
+<h2 class="section-title">Produtos ARDUET</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Kit Arduino</h3>
-<p>Ideal para aprendizagem e protótipos.</p>
+<h3>🤖 Transformers ARDUET</h3>
+<p>
+Modelos articulados inspirados em robótica, tecnologia e criatividade.
+</p>
 </div>
 
 <div class="card">
-<h3>Peças DIY</h3>
-<p>Componentes para os seus projetos criativos.</p>
+<h3>🥤 Liquidificador Portátil ARDUET</h3>
+<p>
+Portátil, recarregável e ideal para sumos e batidos.
+</p>
 </div>
 
 <div class="card">
-<h3>Modelos Arduet</h3>
-<p>Criações exclusivas da comunidade ARDUET.</p>
+<h3>👕 Camisetas ARDUET</h3>
+<p>
+Conforto e identidade visual exclusiva da marca.
+</p>
+</div>
+
+<div class="card">
+<h3>☕ Chávenas ARDUET</h3>
+<p>
+Canecas personalizadas para o dia a dia.
+</p>
+</div>
+
+<div class="card">
+<h3>🔥 Beyblades ARDUET</h3>
+<p>
+Design exclusivo, desempenho e diversão.
+</p>
 </div>
 
 </div>
@@ -335,13 +325,20 @@ Projetos criativos utilizando materiais acessíveis.
 
 <div class="about">
 
-A ARDUET é uma iniciativa focada em tecnologia, robótica,
-eletrónica, mecânica e criatividade.
+A ARDUET é uma marca criativa focada em tecnologia,
+design, inovação e cultura maker.
 
-O objetivo é transformar ideias em projetos reais e inspirar
-criadores a aprender através da prática, da inovação e da cultura DIY.
+Desenvolvemos conceitos, produtos e projectos que unem
+imaginação, engenharia e criatividade para inspirar
+pessoas a criar, evoluir e inovar.
 
 </div>
+
+</section>
+
+<section id="contacto">
+
+<h2 class="section-title">Contactos e Redes Sociais</h2>
 
 <div class="social">
 
@@ -357,7 +354,7 @@ criadores a aprender através da prática, da inovação e da cultura DIY.
 📘 Facebook
 </a>
 
-https://wa.me/258843784290
+https://wa.me/+258843784290
 💬 WhatsApp
 </a>
 
@@ -367,21 +364,17 @@ https://github.com/arduet09
 
 </div>
 
-</section>
-
-<section id="contacto">
-
-<h2 class="section-title">Contacto</h2>
-
-<div class="card" style="max-width:600px;margin:auto;text-align:center;">
+<div class="card" style="max-width:600px;margin:30px auto;text-align:center;">
 
 <h3>ARDUET</h3>
 
-<p><strong>WhatsApp:</strong> +258 843784290</p>
+<p><strong>WhatsApp:</strong> +258 843 784 290</p>
 
 <p><strong>YouTube:</strong> @arduet09</p>
 
 <p><strong>Instagram:</strong> @arduetoficial</p>
+
+<p><strong>Facebook:</strong> ARDUET Oficial</p>
 
 </div>
 
@@ -391,11 +384,14 @@ https://github.com/arduet09
 
 <h3>ARDUET</h3>
 
-<p>DIY • Tecnologia • Inovação</p>
+<p>Cria. Evolui. Inspira.</p>
 
-<p>© 2026 Todos os direitos reservados.</p>
+<p>Mais que produtos, é criação.</p>
+
+<p>© 2026 ARDUET. Todos os direitos reservados.</p>
 
 </footer>
 
 </body>
-</html>
+    </html>
+    

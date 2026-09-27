@@ -1,428 +1,253 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ARDUET | Cria. Evolui. Inspira.</title>
-
-<style>
-
-:root{
-    --bg:#050b18;
-    --card:#101b33;
-    --primary:#00d9ff;
-    --text:#ffffff;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-}
-
-header{
-    position:sticky;
-    top:0;
-    background:#050b18;
-    border-bottom:2px solid var(--primary);
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-}
-
-.logo{
-    font-size:2rem;
-    font-weight:bold;
-    color:var(--primary);
-    text-shadow:0 0 15px var(--primary);
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:var(--primary);
-}
-
-.hero{
-    min-height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:5rem;
-    color:var(--primary);
-    text-shadow:0 0 20px var(--primary);
-}
-
-.hero p{
-    margin-top:20px;
-    max-width:800px;
-    font-size:1.2rem;
-    line-height:1.8;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 30px;
-    background:var(--primary);
-    color:black;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-section{
-    padding:80px 20px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    color:var(--primary);
-    margin-bottom:40px;
-    font-size:2.3rem;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:var(--card);
-    padding:25px;
-    border-radius:15px;
-    border:1px solid rgba(0,217,255,.2);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:var(--primary);
-    margin-bottom:10px;
-}
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
-}
-
-.social{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin-top:20px;
-}
-
-.social a{
-    text-decoration:none;
-    color:var(--primary);
-    border:1px solid var(--primary);
-    padding:10px 18px;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.social a:hover{
-    background:var(--primary);
-    color:black;
-}
-
-.contact-card{
-    max-width:600px;
-    margin:30px auto;
-    text-align:center;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(255,255,255,.1);
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:3rem;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-}
-
-}
-
-.product-category {
-    margin-bottom: 60px;
-}
-
-.category-title {
-    font-size: 1.8rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0,217,255,.3);
-}
-  </style>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ARDUET — tecnologia, inovação, design, cultura maker e serviços elétricos.">
+  <title>ARDUET | Cria. Evolui. Inspira.</title>
+  <link rel="icon" type="image/png" href="imagens/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="site-header" id="topo">
+  <div class="navbar">
+    <a class="brand" href="#inicio" aria-label="ARDUET - Início">
+      <span class="brand-mark"><img src="imagens/logo.png" alt="Símbolo ARDUET"></span>
+      <span class="brand-text">
+        <strong>ARDUET</strong>
+        <small>Cria. Evolui. Inspira.</small>
+      </span>
+    </a>
 
-<div class="navbar">
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
-<div class="logo">ARDUET</div>
-
-<nav>
-<ul>
-<li><a href="#inicio">Início</a></li>
-<li><a href="#produtos">Produtos</a></li>
-<li><a href="#servicos">Serviços</a></li>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#contacto">Contacto</a></li>
-</ul>
-</nav>
-
-</div>
-
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero" id="inicio">
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="imagens/logo.png" alt="Símbolo oficial da ARDUET">
+      </div>
 
-<h1>ARDUET</h1>
+      <div class="hero-copy">
+        <span class="eyebrow">TECNOLOGIA • MAKER • CRIATIVIDADE</span>
+        <h1>ARDUET</h1>
+        <h2>Cria. Evolui. Inspira.</h2>
+        <p>
+          Mais que produtos, é criação.<br>
+          Tecnologia, inovação, design e cultura maker numa única marca.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#produtos">Explorar Produtos <span>→</span></a>
+          <a class="btn btn-ghost" href="#sobre">Conhecer a ARDUET</a>
+        </div>
+      </div>
 
-<p>
-Cria. Evolui. Inspira.
-<br><br>
-Mais que produtos, é criação.
-<br>
-Tecnologia, inovação, design e cultura maker numa única marca.
-</p>
+      <div class="hero-tech">
+        <span>ARDUET</span>
+        <b>SONHE</b>
+        <b>PROJETE</b>
+        <b>CONSTRUA</b>
+      </div>
+    </div>
+  </section>
 
-<a href="#produtos" class="btn">Explorar Produtos</a>
-
-</section>
-
-<section id="produtos">
-
-<h2 class="section-title">Produtos ARDUET</h2>
-
-<div class="product-category">
-<h3 class="category-title">Transformers</h3>
-<div class="cards">
-<div class="card">
-<img src="imagens/transformers.jpg" alt="Transformers ARDUET">
-<h3>Transformers ARDUET</h3>
-<p>Modelos inspirados em robótica, engenharia e criatividade.</p>
-</div>
-</div>
-</div>
-
-<div class="product-category">
-<h3 class="category-title">Beyblades</h3>
-<div class="cards">
-<div class="card">
-<img src="imagens/beyblades.jpg" alt="Beyblades ARDUET">
-<h3>Beyblades ARDUET</h3>
-<p>Design exclusivo, desempenho e diversão.</p>
-<p style="color: var(--primary); font-weight: bold; margin-top: 10px;">200 MT</p>
-</div>
-</div>
-</div>
-
-<div class="product-category">
-<h3 class="category-title">Liquidificador</h3>
-<div class="cards">
-<div class="card">
-<img src="imagens/liquidificador.jpg" alt="Liquidificador Portátil">
-<h3>Liquidificador Portátil</h3>
-<p>Prático, portátil e recarregável para o dia a dia.</p>
-</div>
-</div>
-</div>
-
-<div class="product-category">
-<h3 class="category-title">Camisetas</h3>
-<div class="cards">
-<div class="card">
-<img src="imagens/camisetas.jpg" alt="Camisetas ARDUET">
-<h3>Camisetas ARDUET</h3>
-<p>Estilo, conforto e identidade visual exclusiva.</p>
-</div>
-</div>
-</div>
-
-<div class="product-category">
-<h3 class="category-title">Chávenas</h3>
-<div class="cards">
-<div class="card">
-<img src="imagens/chavenas.jpg" alt="Chávenas ARDUET">
-<h3>Chávenas ARDUET</h3>
-<p>Canecas personalizadas para fãs da marca.</p>
-</div>
-</div>
+  <section class="section" id="produtos">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">◈ PRODUTOS</span>
+        <h2>O que a ARDUET cria?</h2>
+      </div>
+      <p>Produtos únicos, feitos com criatividade, engenharia e identidade.</p>
     </div>
 
-</section>
+    <div class="cards product-grid">
+      <article class="card product-card">
+        <div class="product-image">
+          <img src="imagens/transformers.jpg" alt="Transformers ARDUET" onerror="this.parentElement.classList.add('missing')">
+          <span>🤖</span>
+        </div>
+        <div class="card-body">
+          <h3>Transformers ARDUET</h3>
+          <p>Modelos inspirados em robótica, engenharia e criatividade.</p>
+          <a href="#contacto" class="card-link">Saber mais →</a>
+        </div>
+      </article>
 
-<section id="servicos">
+      <article class="card product-card">
+        <div class="product-image">
+          <img src="imagens/beyblades.jpg" alt="Beyblades ARDUET" onerror="this.parentElement.classList.add('missing')">
+          <span>◉</span>
+        </div>
+        <div class="card-body">
+          <h3>Beyblades ARDUET</h3>
+          <p>Design exclusivo, desempenho e diversão.</p>
+          <strong class="price">200 MT</strong>
+          <a href="#contacto" class="card-link">Encomendar →</a>
+        </div>
+      </article>
 
-<h2 class="section-title">Serviços Elétricos</h2>
+      <article class="card product-card">
+        <div class="product-image">
+          <img src="imagens/liquidificador.jpg" alt="Liquidificador Portátil" onerror="this.parentElement.classList.add('missing')">
+          <span>🥤</span>
+        </div>
+        <div class="card-body">
+          <h3>Liquidificador Portátil</h3>
+          <p>Prático, portátil e recarregável para o dia a dia.</p>
+          <a href="#contacto" class="card-link">Saber mais →</a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>⚡ Instalações Elétricas</h3>
-<p>
-Instalações elétricas residenciais e comerciais.
-</p>
-</div>
+      <article class="card product-card">
+        <div class="product-image">
+          <img src="imagens/camisetas.jpg" alt="Camisetas ARDUET" onerror="this.parentElement.classList.add('missing')">
+          <span>👕</span>
+        </div>
+        <div class="card-body">
+          <h3>Camisetas ARDUET</h3>
+          <p>Estilo, conforto e identidade visual exclusiva.</p>
+          <a href="#contacto" class="card-link">Ver modelos →</a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>🔧 Manutenção Elétrica</h3>
-<p>
-Diagnóstico e reparação de avarias elétricas.
-</p>
-</div>
+      <article class="card product-card">
+        <div class="product-image">
+          <img src="imagens/chavenas.jpg" alt="Chávenas ARDUET" onerror="this.parentElement.classList.add('missing')">
+          <span>☕</span>
+        </div>
+        <div class="card-body">
+          <h3>Chávenas ARDUET</h3>
+          <p>Canecas personalizadas para fãs da marca.</p>
+          <a href="#contacto" class="card-link">Ver modelos →</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<div class="card">
-<h3>💡 Sistemas de Iluminação</h3>
-<p>
-Instalação de iluminação LED e decorativa.
-</p>
-</div>
+  <section class="section services-section" id="servicos">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">⚡ SERVIÇOS</span>
+        <h2>Serviços Elétricos</h2>
+      </div>
+      <p>Soluções elétricas para residências, pequenos negócios e outros espaços.</p>
+    </div>
 
-<div class="card">
-<h3>🏠 Ligações Residenciais</h3>
-<p>
-Ligações elétricas para habitações e pequenos estabelecimentos.
-</p>
-</div>
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-icon">⚡</span>
+        <h3>Instalações Elétricas</h3>
+        <p>Instalações residenciais e comerciais.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3>Manutenção Elétrica</h3>
+        <p>Diagnóstico e reparação de avarias.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">💡</span>
+        <h3>Sistemas de Iluminação</h3>
+        <p>Instalação de iluminação LED e decorativa.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">🏠</span>
+        <h3>Ligações Residenciais</h3>
+        <p>Ligações para habitações e pequenos estabelecimentos.</p>
+      </article>
+    </div>
+  </section>
 
-</div>
+  <section class="section about-section" id="sobre">
+    <div class="about-panel">
+      <div class="about-logo">
+        <img src="imagens/logo.png" alt="Símbolo ARDUET">
+      </div>
+      <div class="about-copy">
+        <span class="section-kicker">◈ SOBRE A ARDUET</span>
+        <h2>Quem somos</h2>
+        <p>
+          A ARDUET é uma marca dedicada à tecnologia, inovação,
+          criatividade e cultura maker.
+        </p>
+        <p>
+          Desenvolvemos produtos exclusivos e disponibilizamos
+          serviços elétricos com foco na qualidade, profissionalismo
+          e satisfação dos clientes.
+        </p>
+        <a class="btn btn-primary" href="#contacto">Falar connosco →</a>
+      </div>
+      <div class="values">
+        <div><span>✦</span> Inovação</div>
+        <div><span>💡</span> Criatividade</div>
+        <div><span>◈</span> Qualidade</div>
+        <div><span>☺</span> Satisfação</div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section class="section contact-section" id="contacto">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">◈ CONTACTO</span>
+        <h2>Fale com a ARDUET</h2>
+      </div>
+      <p>Estamos disponíveis para projetos, produtos e serviços.</p>
+    </div>
 
-<section id="sobre">
+    <div class="contact-layout">
+      <div class="social-grid">
+        <a class="social-card youtube" href="https://youtube.com/@arduet09" target="_blank" rel="noopener">
+          <span>▶</span><div><strong>YouTube</strong><small>@arduet09</small></div>
+        </a>
+        <a class="social-card instagram" href="https://www.instagram.com/arduetoficial/" target="_blank" rel="noopener">
+          <span>◎</span><div><strong>Instagram</strong><small>@arduetoficial</small></div>
+        </a>
+        <a class="social-card facebook" href="https://www.facebook.com/profile.php?id=61593821342942" target="_blank" rel="noopener">
+          <span>f</span><div><strong>Facebook</strong><small>ARDUET Oficial</small></div>
+        </a>
+        <a class="social-card whatsapp" href="https://wa.me/258843784290" target="_blank" rel="noopener">
+          <span>◉</span><div><strong>WhatsApp</strong><small>+258 843 784 290</small></div>
+        </a>
+        <a class="social-card github" href="https://github.com/arduet09" target="_blank" rel="noopener">
+          <span>◉</span><div><strong>GitHub</strong><small>arduet09</small></div>
+        </a>
+      </div>
 
-<h2 class="section-title">Sobre a ARDUET</h2>
-
-<div class="about">
-
-A ARDUET é uma marca dedicada à tecnologia, inovação,
-criatividade e cultura maker.
-
-Desenvolvemos produtos exclusivos e disponibilizamos
-serviços elétricos com foco na qualidade, profissionalismo
-e satisfação dos clientes.
-
-</div>
-
-</section>
-
-<section id="contacto">
-
-<h2 class="section-title">Contacto</h2>
-
-<div class="social">
-
-<a href="https://youtube.com/@arduet09?si=4L_tiF2lJ_ncvXWu" target="_blank">
-YouTube
-</a>
-
-<a href="https://www.instagram.com/arduetoficial?stkn=aXpkbzlyZTNidjMz" target="_blank">
-Instagram
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61593821342942" target="_blank">
-Facebook
-</a>
-
-<a href="https://wa.me/258843784290" target="_blank">
-WhatsApp
-</a>
-
-<a href="https://github.com/arduet09" target="_blank">
-GitHub
-</a>
-
-</div>
-
-<div class="card contact-card">
-
-<h3>ARDUET</h3>
-
-<p>📱 WhatsApp: +258 843 784 290</p>
-
-<p>📺 YouTube: @arduet09</p>
-
-<p>📸 Instagram: @arduetoficial</p>
-
-<p>📘 Facebook: ARDUET Oficial</p>
-
-</div>
-
-</section>
+      <div class="contact-card">
+        <img src="imagens/logo.png" alt="ARDUET">
+        <h3>ARDUET</h3>
+        <p>Cria. Evolui. Inspira.</p>
+        <div class="contact-details">
+          <span>📱 +258 843 784 290</span>
+          <span>📺 @arduet09</span>
+          <span>📸 @arduetoficial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-
-<h3>ARDUET</h3>
-
-<p>Cria. Evolui. Inspira.</p>
-
-<p>Mais que produtos, é criação.</p>
-
-<p>© 2026 ARDUET. Todos os direitos reservados.</p>
-
+  <div class="footer-brand">
+    <img src="imagens/logo.png" alt="Símbolo ARDUET">
+    <div><strong>ARDUET</strong><small>Cria. Evolui. Inspira.</small></div>
+  </div>
+  <p>© 2026 ARDUET. Todos os direitos reservados.</p>
+  <a class="back-top" href="#topo" aria-label="Voltar ao topo">↑</a>
 </footer>
 
+<script src="script.js"></script>
 </body>
-    </html>
-    
+</html>
